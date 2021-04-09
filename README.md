@@ -1,6 +1,9 @@
 # image-signature-js
+
 Pure JS function that generates a hash for a canvas image that can be used to identify similar images
 
+This is a fork of [Bill MacDonald's original implementation](https://github.com/alt-text-org/image-signature-js). It
+makes no changes other than updating library versions.
 
 ```javascript
 const signature = require('image-signature')
@@ -9,7 +12,7 @@ const signature = require('image-signature')
 let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let img = document.getElementById('foo');
-context.drawImage(img, 0, 0 );
+context.drawImage(img, 0, 0);
 let imageData = context.getImageData(0, 0, img.width, img.height);
 
 // calculating the signature
@@ -18,8 +21,9 @@ let sig = signature.generate(imageData)
 let distance = signature.distance(sig1, sig2)
 ```
 
-The signature is an array of 81 arrays, one for each grid point in a 10x10 grid.  Each array contains comparisons of grid pieces of image with each other (much darker, darker, same, lighter, much lighter). The algorithm used to generate the signature is based on the method described in [Goldberg, et al](http://www.cs.cmu.edu/~hcwong/Pdfs/icip02.ps).
+The signature is an array of 81 arrays, one for each grid point in a 10x10 grid. Each array contains comparisons of grid
+pieces of image with each other (much darker, darker, same, lighter, much lighter). The algorithm used to generate the
+signature is based on the method described in [Goldberg, et al](http://www.cs.cmu.edu/~hcwong/Pdfs/icip02.ps).
 
-The calculated "distance" is a measure of the similarity between the images. It is computed as the normalized L2 norm of the signature, as described in the Goldberg paper.
-
-This package is the core algorithm used for comparing images and video frames in the Chrome extension [Saucer](https://chrome.google.com/webstore/detail/saucer-beta/pobajnaadnjijjbdmlikcbkgopbebpif?authuser=1).
+The calculated "distance" is a measure of the similarity between the images. It is computed as the normalized L2 norm of
+the signature, as described in the Goldberg paper.
