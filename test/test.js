@@ -38,7 +38,7 @@ describe('imageSignature', function () {
         data: medium.flatten().tolist()
       }
       const signatureSmall = imageSignature.generate(imageDataSmall)
-      this.timeout(20000)
+      this.timeout(100000)
       const signatureMedium = imageSignature.generate(imageDataMedium)
       const distance = imageSignature.distance(signatureSmall, signatureMedium)
       assert(distance < 0.4)
