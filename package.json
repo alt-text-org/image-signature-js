@@ -1,6 +1,6 @@
 {
-  "name": "image-signature",
-  "version": "0.3.2",
+  "name": "image-signature-fork",
+  "version": "0.4.0",
   "description": "Pure JS library that hashes images in order to compare their similarity",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wmsmacdonald/image-signature-js.git"
+    "url": "git+https://github.com/alt-text-org/image-signature-js.git"
   },
   "keywords": [
     "hash",
@@ -22,20 +22,20 @@
   "author": "William MacDonald",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wmsmacdonald/image-signature-js/issues"
+    "url": "https://github.com/alt-text-org/image-signature-js/issues"
   },
-  "homepage": "https://github.com/wmsmacdonald/image-signature-js#readme",
+  "homepage": "https://github.com/alt-text-org/image-signature-js#readme",
   "devDependencies": {
-    "assert": "^1.4.1",
-    "express": "^4.14.0",
-    "mocha": "^3.2.0",
-    "numjs": "^0.12.3",
-    "open": "0.0.5",
-    "standard": "^8.6.0"
+    "assert": "^2.0.0",
+    "express": "^4.17.1",
+    "mocha": "^8.3.2",
+    "open": "8.0.5",
+    "standard": "^16.0.3",
+    "static-eval": "^2.1.0"
   },
   "dependencies": {
-    "numjs": "^0.12.4",
-    "underscore": "^1.8.3"
+    "numjs": "^0.16.0",
+    "underscore": "^1.12.1"
   },
   "standard": {
     "ignore": [
