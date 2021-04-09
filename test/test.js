@@ -2,8 +2,6 @@
 
 'use strict'
 
-const fs = require('fs')
-
 const assert = require('assert')
 const _ = require('underscore')
 const nj = require('numjs')
@@ -38,12 +36,13 @@ describe('imageSignature', function () {
         data: medium.flatten().tolist()
       }
       const signatureSmall = imageSignature.generate(imageDataSmall)
-      this.timeout(100000)
+      this.timeout(20000)
       const signatureMedium = imageSignature.generate(imageDataMedium)
       const distance = imageSignature.distance(signatureSmall, signatureMedium)
       assert(distance < 0.4)
     })
     it('distance between different images should be large', function () {
+      this.timeout(5000)
       const istanbul = addAlphas(nj.images.read(__dirname + '/fixtures/istanbul_medium.jpg'))
       const spaceship = addAlphas(nj.images.read(__dirname + '/fixtures/spaceship.jpg'))
       
