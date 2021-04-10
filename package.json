@@ -1,8 +1,9 @@
 {
   "name": "@alt-text-org/image-signature",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Pure JS library that hashes images in order to compare their similarity",
   "main": "index.js",
+  "types": "dist/image_signature.d.ts",
   "scripts": {
     "test": "mocha",
     "standard": "standard",
@@ -18,6 +19,15 @@
     "pure",
     "reverse",
     "search"
+  ],
+  "files": [
+    "dist/image_signature.js",
+    "lib/array_util.js",
+    "lib/image_signature.js",
+    "lib/nj_util.js",
+    "index.js",
+    "dist/image_signature.d.ts",
+    "dist/image_signature.js"
   ],
   "author": "William MacDonald",
   "license": "MIT",
