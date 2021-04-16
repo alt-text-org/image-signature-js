@@ -9,8 +9,7 @@ const signature = {
 
 if (typeof window === 'undefined') {
   module.exports = signature
-}
-else {
+} else {
   window.imageSignature = signature
 }
 
